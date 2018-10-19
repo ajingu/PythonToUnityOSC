@@ -1,6 +1,4 @@
 import argparse
-import random
-import time
 
 from pythonosc import udp_client
 
@@ -13,6 +11,7 @@ if __name__ == "__main__":
 
     client = udp_client.SimpleUDPClient(args.ip, args.port)
 
-    for x in range(10):
-        client.send_message("/volume", random.random())
-    time.sleep(1)
+    client.send_message("/volume", 0.1)
+    client.send_message("/volume", "Hello")
+    client.send_message("/volume", [1, 2, 3])
+    client.send_message("/volume", {"one": 1, "two": 2})
