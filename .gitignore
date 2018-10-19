@@ -110,6 +110,9 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# pycharm
+Python/.idea*
+
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
